@@ -31,7 +31,7 @@ class ListProvinceActivity : AppCompatActivity() {
 
     private fun setListener() {
         binding.apply {
-            toolbar.setNavigationOnClickListener {
+            labelBack.setOnClickListener {
                 onBackPressed()
             }
         }
@@ -64,14 +64,6 @@ class ListProvinceActivity : AppCompatActivity() {
         }
     }
 
-    private fun setLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
-        } else {
-            binding.progressBar.visibility = View.GONE
-        }
-    }
-
     private fun filter(text: String) {
         val provinceList = ArrayList<ProvinsiItem>()
         for (item in provinceList) {
@@ -81,5 +73,13 @@ class ListProvinceActivity : AppCompatActivity() {
             }
         }
         provinceAdapter!!.filterList(provinceList)
+    }
+
+    private fun setLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
 }

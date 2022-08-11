@@ -16,6 +16,9 @@
         android:theme="@style/Theme.WilayahAdministrasiIndonesia"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.TableActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.ListProvinceActivity"
             android:exported="false" />
         <activity

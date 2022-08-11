@@ -47,8 +47,8 @@
                 style="@style/TextView.PoppinsRegular14spBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:text="Provinsi"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -60,15 +60,13 @@
                 style="@style/TextView.PoppinsRegular14spBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
                 android:background="@drawable/bg_edit_text"
                 android:padding="16dp"
                 android:text="Pilih Provinsi"
                 app:drawableEndCompat="@drawable/ic_arrow_down"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/labelProvince"
+                app:layout_constraintStart_toStartOf="@+id/labelProvince"
                 app:layout_constraintTop_toBottomOf="@+id/labelProvince" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -97,6 +95,17 @@
                     tools:ignore="LabelFor" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonTable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Table View"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/containerRegency"
+                app:layout_constraintStart_toStartOf="@+id/containerRegency"
+                app:layout_constraintTop_toBottomOf="@+id/containerRegency" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

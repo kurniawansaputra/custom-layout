@@ -21,29 +21,33 @@ class MainActivity : AppCompatActivity() {
     private var nameRegency: String = ""
     private lateinit var mainViewModel: MainViewModel
 
-    private lateinit var binding2: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding2 = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding2.root)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
         setListener()
     }
 
     private fun setListener() {
-        binding2.apply {
+        binding.apply {
             textProvince.setOnClickListener {
                 val moveIntent = Intent(this@MainActivity, ListProvinceActivity::class.java)
                 resultProvince.launch(moveIntent)
+            }
+            buttonTable.setOnClickListener {
+                val moveIntent = Intent(this@MainActivity, TableActivity::class.java)
+                startActivity(moveIntent)
             }
         }
     }
 
     @SuppressLint("SetTextI18n")
     private fun setDetail() {
-        binding2.apply {
+        binding.apply {
             textProvince.text = nameProvince
         }
         setRegency()
@@ -62,9 +66,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             val regencyAdapter = ArrayAdapter(this, R.layout.item_row_dropdown, listRegency)
-            binding2.autoRegency.setAdapter(regencyAdapter)
+            binding.autoRegency.setAdapter(regencyAdapter)
 
-            binding2.autoRegency.setOnItemClickListener { _, _, i, _ ->
+            binding.autoRegency.setOnItemClickListener { _, _, i, _ ->
                 idRegency = regencyData[i].id.toString()
                 nameRegency = regencyData[i].nama.toString()
             }
