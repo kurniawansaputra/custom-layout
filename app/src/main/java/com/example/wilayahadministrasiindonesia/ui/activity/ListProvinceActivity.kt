@@ -3,6 +3,7 @@ package com.example.wilayahadministrasiindonesia.ui.activity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -11,10 +12,12 @@ import com.example.wilayahadministrasiindonesia.databinding.ActivityListProvince
 import com.example.wilayahadministrasiindonesia.model.ProvinsiItem
 import com.example.wilayahadministrasiindonesia.viewmodel.ListProvinceViewModel
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ListProvinceActivity : AppCompatActivity() {
     private lateinit var listProvinceViewModel: ListProvinceViewModel
     private var provinceAdapter: ProvinceAdapter? = null
+    private lateinit var provinceList: ArrayList<ProvinsiItem>
 
     private lateinit var binding: ActivityListProvinceBinding
 
@@ -43,7 +46,8 @@ class ListProvinceActivity : AppCompatActivity() {
         }
         listProvinceViewModel.getProvince()
         listProvinceViewModel.province.observe(this) {
-            provinceAdapter = ProvinceAdapter(it.provinsi as ArrayList<ProvinsiItem>, this)
+            provinceList = it.provinsi as ArrayList<ProvinsiItem>
+            provinceAdapter = ProvinceAdapter(provinceList, this)
             binding.rvProvince.adapter = provinceAdapter
             binding.rvProvince.setHasFixedSize(true)
 
@@ -65,14 +69,23 @@ class ListProvinceActivity : AppCompatActivity() {
     }
 
     private fun filter(text: String) {
-        val provinceList = ArrayList<ProvinsiItem>()
-        for (item in provinceList) {
-            if (item.nama?.lowercase(Locale.getDefault())
-                    ?.contains(text.lowercase(Locale.getDefault())) == true) {
-                provinceList.add(item)
-            }
+        //new array list that will hold the filtered data
+        val filteredNames = ArrayList<ProvinsiItem>()
+        //looping through existing elements and adding the element to filtered list
+        provinceList.filterTo(filteredNames) {
+            //if the existing elements contains the search input
+            it.nama?.lowercase(Locale.getDefault())?.contains(text.lowercase(Locale.getDefault())) == true
         }
-        provinceAdapter!!.filterList(provinceList)
+        //calling a method of the adapter class and passing the filtered list
+        if (filteredNames.isEmpty()) {
+            binding.containerNotFound.containerNotFound.visibility = View.VISIBLE
+            binding.rvProvince.visibility = View.GONE
+        } else {
+            binding.containerNotFound.containerNotFound.visibility = View.GONE
+            binding.rvProvince.visibility = View.VISIBLE
+            provinceAdapter?.filterList(filteredNames)
+        }
+
     }
 
     private fun setLoading(isLoading: Boolean) {

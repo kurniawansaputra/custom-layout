@@ -1,5 +1,6 @@
 package com.example.wilayahadministrasiindonesia.adapter
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.content.Context
@@ -43,8 +44,9 @@ class ProvinceAdapter(private var provinceList: ArrayList<ProvinsiItem>, private
 
     override fun getItemCount(): Int = provinceList.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filterList(filteredNames: ArrayList<ProvinsiItem>) {
-        this.provinceList = filteredNames
+        provinceList = filteredNames
         notifyDataSetChanged()
     }
 }
