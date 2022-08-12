@@ -49,5 +49,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.Ferfalk:SimpleSearchView:0.2.0'
     implementation 'com.github.levitnudi:LegacyTableView:1.4'
+    implementation 'com.github.tapadoo:alerter:7.2.4'
+
 }

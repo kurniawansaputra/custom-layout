@@ -9,6 +9,7 @@
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable-anydpi/ic_search.xml" value="0.1275" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable-mdpi/bg_dialog.xml" value="0.121" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1275" />
+        <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable/bg_dialog.xml" value="0.1275" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable/bg_edit_text.xml" value="0.1275" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable/bg_edit_text_search.xml" value="0.1275" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1275" />
@@ -19,6 +20,7 @@
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/item_row_dropdown.xml" value="0.10989583333333333" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/item_row_list.xml" value="0.264" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/item_row_list2.xml" value="0.25" />
+        <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/layout_alert.xml" value="0.24895833333333334" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/layout_dialog_search_item.xml" value="0.25" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/layout_dropdown_item.xml" value="0.25" />
         <entry key="..\:/00 Project/WilayahAdministrasiIndonesia/app/src/main/res/layout/layout_not_found.xml" value="0.24895833333333334" />

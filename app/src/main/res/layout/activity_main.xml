@@ -100,12 +100,23 @@
                 android:id="@+id/buttonTable"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="24dp"
                 android:text="Table View"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="@+id/containerRegency"
                 app:layout_constraintStart_toStartOf="@+id/containerRegency"
                 app:layout_constraintTop_toBottomOf="@+id/containerRegency" />
+
+            <Button
+                android:id="@+id/buttonAlert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Alert"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/buttonTable"
+                app:layout_constraintStart_toStartOf="@+id/buttonTable"
+                app:layout_constraintTop_toBottomOf="@+id/buttonTable" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

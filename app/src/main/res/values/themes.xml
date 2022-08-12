@@ -52,9 +52,53 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="TextView.PoppinsMedium14spWhite">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="TextView.PoppinsMedium16sp">
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="SimpleSearchViewStyle">
+        <item name="type">card</item>
+        <item name="android:hint">Cari..</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/black</item>
+
+<!--        &lt;!&ndash; Search bar/card background &ndash;&gt;-->
+<!--        <item name="searchBackground">@drawable/sample</item>-->
+
+<!--        &lt;!&ndash; Change icons &ndash;&gt;-->
+<!--        <item name="searchBackIcon">@drawable/sample</item>-->
+<!--        <item name="searchClearIcon">@drawable/sample</item>-->
+<!--        <item name="searchVoiceIcon">@drawable/sample</item>-->
+
+<!--        &lt;!&ndash; Change icons tint &ndash;&gt;-->
+<!--        <item name="backIconTint">1</item>-->
+<!--        <item name="iconsTint">1</item>-->
+
+<!--        &lt;!&ndash; Change icons alpha &ndash;&gt;-->
+<!--        <item name="backIconAlpha">0.8</item>-->
+<!--        <item name="iconsAlpha">0.8</item>-->
+
+<!--        &lt;!&ndash; Change search input colors &ndash;&gt;-->
+<!--        <item name="cursorColor">@color/sample</item>-->
+<!--        <item name="hintColor">@color/sample</item>-->
+
+        <!-- Enable voice search -->
+        <item name="voiceSearch">true</item>
+
+<!--        &lt;!&ndash; Set voice search prompt &ndash;&gt;-->
+<!--        <item name="voiceSearchPrompt">Sample</item>-->
+    </style>
+
+    <style name="SearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 
 </resources>

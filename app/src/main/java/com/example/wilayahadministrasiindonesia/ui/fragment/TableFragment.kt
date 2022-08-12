@@ -10,7 +10,9 @@ import com.example.wilayahadministrasiindonesia.R
 import com.example.wilayahadministrasiindonesia.databinding.FragmentTableBinding
 import com.example.wilayahadministrasiindonesia.model.ProvinsiItem
 import com.example.wilayahadministrasiindonesia.viewmodel.ListProvinceViewModel
+import com.ferfalk.simplesearchview.SimpleSearchView
 import com.levitnudi.legacytableview.LegacyTableView
+
 
 class TableFragment : Fragment() {
     private lateinit var listProvinceViewModel: ListProvinceViewModel
@@ -39,8 +41,18 @@ class TableFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setListener()
         setTable()
     }
+
+    private fun setListener() {
+        binding.apply {
+            toolbar.setNavigationOnClickListener {
+                activity?.onBackPressed()
+            }
+        }
+    }
+
 
     private fun setTable() {
 //        listProvinceViewModel.isLoading.observe(this) {
@@ -108,14 +120,36 @@ class TableFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.option_menu_table, menu)
+
+        val item = menu.findItem(R.id.menuSearch)
+        binding.searchView.setMenuItem(item)
+        binding.searchView.enableVoiceSearch(true)
+
+        binding.searchView.setOnQueryTextListener(object : SimpleSearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                Toast.makeText(requireContext(), "$query", Toast.LENGTH_SHORT).show()
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+//                Toast.makeText(requireContext(), "$newText", Toast.LENGTH_SHORT).show()
+                return false
+            }
+
+            override fun onQueryTextCleared(): Boolean {
+                Toast.makeText(requireContext(), "textCleared", Toast.LENGTH_SHORT).show()
+                return false
+            }
+        })
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.menuCamera -> {
-                Toast.makeText(requireContext(), "Camera", Toast.LENGTH_SHORT).show()
-                true
-            }
+//            R.id.menuSearch -> {
+//                Toast.makeText(requireContext(), "Camera", Toast.LENGTH_SHORT).show()
+//                true
+//            }
             R.id.menuProfile -> {
                 Toast.makeText(requireContext(), "Profile", Toast.LENGTH_SHORT).show()
                 true

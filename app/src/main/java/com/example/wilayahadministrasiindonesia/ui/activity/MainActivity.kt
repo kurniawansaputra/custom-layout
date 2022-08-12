@@ -12,6 +12,7 @@ import com.example.wilayahadministrasiindonesia.R
 import com.example.wilayahadministrasiindonesia.databinding.ActivityMainBinding
 import com.example.wilayahadministrasiindonesia.model.KotaKabupatenItem
 import com.example.wilayahadministrasiindonesia.viewmodel.MainViewModel
+import com.tapadoo.alerter.Alerter
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,17 @@ class MainActivity : AppCompatActivity() {
             buttonTable.setOnClickListener {
                 val moveIntent = Intent(this@MainActivity, TableActivity::class.java)
                 startActivity(moveIntent)
+            }
+            buttonAlert.setOnClickListener {
+                Alerter.create(this@MainActivity)
+                    .setIcon(R.drawable.ic_warning)
+                    .setTitle("Peringatan")
+                    .setText("Harap kolom nama diisi terlebih dahulu.")
+                    .enableSwipeToDismiss()
+                    .setBackgroundColorRes(R.color.red)
+                    .setTitleAppearance(R.style.TextView_PoppinsMedium16sp)
+                    .setTextAppearance(R.style.TextView_PoppinsRegular14spWhite)
+                    .show()
             }
         }
     }
@@ -82,8 +94,6 @@ class MainActivity : AppCompatActivity() {
 //                override fun onNothingSelected(adapterView: AdapterView<*>) {}
 //            }
         }
-
-
     }
 
     private val resultProvince =
