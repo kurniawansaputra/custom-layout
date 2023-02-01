@@ -14,7 +14,6 @@ import com.example.wilayahadministrasiindonesia.model.KotaKabupatenItem
 import com.example.wilayahadministrasiindonesia.viewmodel.MainViewModel
 import com.tapadoo.alerter.Alerter
 
-
 class MainActivity : AppCompatActivity() {
     private var idProvince: String = ""
     private var nameProvince: String = ""
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListener() {
         binding.apply {
-            textProvince.setOnClickListener {
+            editProvince.setOnClickListener {
                 val moveIntent = Intent(this@MainActivity, ListProvinceActivity::class.java)
                 resultProvince.launch(moveIntent)
             }
@@ -54,13 +53,17 @@ class MainActivity : AppCompatActivity() {
                     .setTextAppearance(R.style.TextView_PoppinsRegular14spWhite)
                     .show()
             }
+            buttonJson.setOnClickListener {
+                val intent = Intent(this@MainActivity, JsonActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
     @SuppressLint("SetTextI18n")
     private fun setDetail() {
         binding.apply {
-            textProvince.text = nameProvince
+            editProvince.setText(nameProvince)
         }
         setRegency()
     }

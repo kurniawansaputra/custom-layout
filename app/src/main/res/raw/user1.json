@@ -1,0 +1,58 @@
+{
+  "meta": {
+        "message": "List of User",
+        "code": 200,
+        "status": "success"
+    },
+  "data": [{
+  "id": 1,
+  "username": "gprazer0",
+  "avatar_url": "https://robohash.org/quoseaquedignissimos.png?size=100x100&set=set1"
+}, {
+  "id": 2,
+  "username": "abockin1",
+  "avatar_url": "https://robohash.org/sunteumveniam.png?size=100x100&set=set1"
+}, {
+  "id": 3,
+  "username": "cmouncher2",
+  "avatar_url": "https://robohash.org/eosestexercitationem.png?size=100x100&set=set1"
+}, {
+  "id": 4,
+  "username": "jdanbye3",
+  "avatar_url": "https://robohash.org/ipsampraesentiumut.png?size=100x100&set=set1"
+}, {
+  "id": 5,
+  "username": "msharram4",
+  "avatar_url": "https://robohash.org/totamquisquo.png?size=100x100&set=set1"
+}, {
+  "id": 6,
+  "username": "cspurman5",
+  "avatar_url": "https://robohash.org/sintvoluptasvoluptatem.png?size=100x100&set=set1"
+}, {
+  "id": 7,
+  "username": "chaugg6",
+  "avatar_url": "https://robohash.org/accusamuscommodiin.png?size=100x100&set=set1"
+}, {
+  "id": 8,
+  "username": "kakrose",
+  "avatar_url": "https://robohash.org/laborevoluptatemid.png?size=100x100&set=set1"
+}, {
+  "id": 9,
+  "username": "upin",
+  "avatar_url": "https://robohash.org/laborevoluptatemid.png?size=100x100&set=set1"
+}, {
+  "id": 10,
+  "username": "ipin",
+  "avatar_url": "https://robohash.org/laborevoluptatemid.png?size=100x100&set=set1"
+},
+          {
+  "id": 11,
+  "username": "tokdalang",
+  "avatar_url": "https://robohash.org/laborevoluptatemid.png?size=100x100&set=set1"
+},
+          {
+  "id": 12,
+  "username": "mail",
+  "avatar_url": "https://robohash.org/laborevoluptatemid.png?size=100x100&set=set1"
+}]
+}
