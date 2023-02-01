@@ -55,15 +55,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textProvince"
+            <EditText
+                android:id="@+id/editProvince"
                 style="@style/TextView.PoppinsRegular14spBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_edit_text"
                 android:padding="16dp"
-                android:text="Pilih Provinsi"
+                android:hint="Pilih Provinsi"
+                android:focusable="false"
                 app:drawableEndCompat="@drawable/ic_arrow_down"
                 app:layout_constraintEnd_toEndOf="@+id/labelProvince"
                 app:layout_constraintStart_toStartOf="@+id/labelProvince"
@@ -79,9 +80,9 @@
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
                 app:hintTextColor="#676767"
-                app:layout_constraintEnd_toEndOf="@+id/textProvince"
-                app:layout_constraintStart_toStartOf="@+id/textProvince"
-                app:layout_constraintTop_toBottomOf="@+id/textProvince">
+                app:layout_constraintEnd_toEndOf="@+id/editProvince"
+                app:layout_constraintStart_toStartOf="@+id/editProvince"
+                app:layout_constraintTop_toBottomOf="@+id/editProvince">
 
                 <AutoCompleteTextView
                     android:id="@+id/autoRegency"
@@ -117,6 +118,17 @@
                 app:layout_constraintEnd_toEndOf="@+id/buttonTable"
                 app:layout_constraintStart_toStartOf="@+id/buttonTable"
                 app:layout_constraintTop_toBottomOf="@+id/buttonTable" />
+
+            <Button
+                android:id="@+id/buttonJson"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Json"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/buttonAlert"
+                app:layout_constraintStart_toStartOf="@+id/buttonAlert"
+                app:layout_constraintTop_toBottomOf="@+id/buttonAlert" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
