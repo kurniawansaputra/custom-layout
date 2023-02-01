@@ -13,6 +13,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField("String", "TOKEN", '"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiMSIsInVzZXJuYW1lIjoiYXBpX2FuZHJvaWQifQ.14X8cwvMSxRmAAg_sEGNSn-La7Qq55vP79Hn39f2NQU"')
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -52,5 +54,6 @@ dependencies {
     implementation 'com.github.Ferfalk:SimpleSearchView:0.2.0'
     implementation 'com.github.levitnudi:LegacyTableView:1.4'
     implementation 'com.github.tapadoo:alerter:7.2.4'
+    implementation 'com.google.code.gson:gson:2.9.0'
 
 }
